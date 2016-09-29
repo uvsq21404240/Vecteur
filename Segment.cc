@@ -67,7 +67,7 @@ class Segment
 	public:
 		Segment();
 		Segment(Point const& p, const double x, const double y);
-		~Segment();
+		~Segment(); //un destructeur ne se surcharge pas.
 		double longueur();
 		bool estHorizontal();
 		bool estVertical();
@@ -95,6 +95,7 @@ int main()
 	Point& p = *p1;
 	Segment *s1 = new Segment();
 	Segment s2; //on initialise sans parentheses pour un obet statique avec le constructueur vide/par defaut
+	//Segment s2 = Point(); marche aussi
 	Segment *s3 = new Segment(p, 0.3, 5);
 	Segment s4(p, 0.3, 5);
 	
