@@ -12,8 +12,8 @@ void echange(int &a, int &b)
 
 /* 3 types de passage en argument aux fonctions
  * valeur 		-> C C++ Java
- * reference	-> C C++
- * adresse		->   C++ Java (que les objets pour java) 
+ * adresse		-> C C++
+ * reference		->   C++ Java (que les objets pour java) 
  * */
 
 int main()
