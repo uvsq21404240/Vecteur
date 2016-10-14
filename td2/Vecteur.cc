@@ -123,15 +123,17 @@ int main()
 	Vecteur& vv1 = *v1;
 	Vecteur& vv2 = *v2;
 	
-	//cout << vv1[11] << endl; l'erreur s'affiche bien.
-	//cout << vv2[1] << endl; ca marche
+	cout << vv1[11] << endl; //l'erreur s'affiche bien (indicage)
+	cout << vv2[1] << endl; //OK
 	
-	//vv1.setIndex(7, 0); OK
-	//vv2 = vv1; OK
-	//vv1 += 2; OK
+	vv1.setIndex(7, 0); //OK
+	vv2 = vv1; //OK
+	vv1 += 2; //OK
 	
-	//cout << vv1; OK
-	cin >> vv1;
+	cout << vv1; //OK
+	cin >> vv1; //OK.il faut rentrer sur l'entree std, les vals(entiers)
+	//que l'on veut affecter une a une (comme un scanf)
+	
 	
 	delete v1;
 	delete v2;
