@@ -1,22 +1,31 @@
+#include "CString.h"
+#include <iostream>
+
+using namespace std;
+
+//classe composée
 class Definition
 {
 	private:
-		CString Clef;
-		CString Def;
+		CString clef;
+		CString def;
+		
 	public:
-		Definition(char *c1, char *c2);
+		Definition(const char *c1, const char *c2);
 		~Definition();
 		CString getClef();
 		CString getDef();
 };
 
-Definition::Definition(char *c1, char *c2): Clef(c1), Def(c2){}
+//Utilisation implicite des constructeurs de CString
+Definition::Definition(const char *c1, const char *c2): clef(c1), def(c2){}
 Definition::~Definition(){}
-CString Definition::getClef(){return Clef;}
-CString Definition::getDef(){return Def;}
+CString Definition::getClef(){return clef;}
+CString Definition::getDef(){return def;}
 
 int main()
 {
 	Definition homer("Homer", "Buveur de biere");
-	cout << "la definition du mot " << homer.getClef() << " est " << homer.getDef() << endl;
+	cout << "la definition du mot " << homer.getClef().getString()\
+	 << " est " << homer.getDef().getString() << endl;
 }
