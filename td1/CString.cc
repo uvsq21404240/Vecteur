@@ -23,6 +23,7 @@ class CString
 		bool plusGrandQue(CString s);
 		bool infOuEgale(CString s);
 		CString plusGrand(CString s);
+		CString& operator=(CString& s);
 };
 
 int CString::nbrChaines = 0;
@@ -92,22 +93,27 @@ CString CString::plusGrand(CString chaine)
 	return chaine;
 }
 
+CString& operator=(CString& s)
+{
+	
+}
+
 int main()
 {
 	CString s1( "toto" ), s2( 'q' ), s3;
 	
 	cout << "nbrChaines" << CString::nbrChaine() << endl;
 	
-	//~ s3 = s1.plus( 'w' );
-	//~ cout << "s3=" << s3.getString() << endl;
-	//~ 
-	//~ if(s1.plusGrandQue(s2))
-		//~ cout << "plus grand" << endl;
-		//~ 
-	//~ if(s1.infOuEgale(s2))
-		//~ cout << "plus petit" << endl;
-	//~ 
-	//~ s3 = s1.plusGrand(s2); //marche pas
+	s3 = s1.plus( 'w' );
+	cout << "s3=" << s3.getString() << endl;
+	
+	if(s1.plusGrandQue(s2))
+		cout << "plus grand" << endl;
+		
+	if(s1.infOuEgale(s2))
+		cout << "plus petit" << endl;
+	
+	s3 = s1.plusGrand(s2);
 	cout << "s3=" << endl;
 	return 0;
 }
