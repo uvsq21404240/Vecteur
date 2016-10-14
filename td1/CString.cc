@@ -112,7 +112,7 @@ bool CString::infOuEgale(CString s)
 
 CString CString::plusGrand(CString s)
 {
-	if(plusGrandQue(s))
+	if(plusGrandQue(s)) //*this > s
 		return *this;
 	return s; //else
 }
