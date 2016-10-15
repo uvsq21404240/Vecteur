@@ -1,6 +1,6 @@
 Pour compiler Dico.cc :
 Se placer dans le répertoire td1
-Supprimer ou commenter le main de CString.cc
+Supprimer ou commenter le main de CString.cc (sélectionner le texte, ctrl + E, sur geany)
 	g++ -c CString.cc
 	g++ -c Dico.cc
 	g++ CString.o Dico.o
