@@ -20,4 +20,5 @@ class CString
 		bool operator<=(CString mot);
 		CString& operator+(char c);
 		CString plusGrand(CString s);
+		bool operator==(const CString& c);
 };

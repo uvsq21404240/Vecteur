@@ -24,6 +24,7 @@ class CString
 		bool operator>(CString mot);
 		bool operator<=(CString mot);
 		CString& operator+(char c);
+		bool operator==(const CString& c);
 		CString plusGrand(CString s);
 };
 
@@ -68,7 +69,6 @@ char CString::getChar(int i) const{ return chaine[i]; }
 
 CString::~CString()
 {
-	cout << "destruction de la chaine " << chaine << endl;
 	delete[] chaine;
 	nbreChaines--;
 }
@@ -122,23 +122,25 @@ CString& CString::operator=(const CString& s)
 	return *this;
 }
 
-int main()
-{
-	CString s1("toto"), s2('q'), s3;
+bool CString::operator==(const CString& c){ return strcmp(getString(), c.getString()) == 0;}
 
-	cout << "nbreChaines = " << CString::getNbrChaine() << endl;
-	
-	s3 = s1 + 'w';
-	cout << "s3 = " << s3.getString() << endl;
-	
-	if(s1 >s2)
-		cout << s1.getString() << " plus grand que " << s2.getString() << endl;
-		
-	if(s1 <= s2)
-		cout << s1.getString() << " plus petit que " << s2.getString() << endl;
-	
-	s3 = s1.plusGrand(s2);
-	cout << "s3 = " << s3.getString() << endl;
-	
-	return 0;
-}
+//~ int main()
+//~ {
+	//~ CString s1("toto"), s2('q'), s3;
+//~ 
+	//~ cout << "nbreChaines = " << CString::getNbrChaine() << endl;
+	//~ 
+	//~ s3 = s1 + 'w';
+	//~ cout << "s3 = " << s3.getString() << endl;
+	//~ 
+	//~ if(s1 >s2)
+		//~ cout << s1.getString() << " plus grand que " << s2.getString() << endl;
+		//~ 
+	//~ if(s1 <= s2)
+		//~ cout << s1.getString() << " plus petit que " << s2.getString() << endl;
+	//~ 
+	//~ s3 = s1.plusGrand(s2);
+	//~ cout << "s3 = " << s3.getString() << endl;
+	//~ 
+	//~ return 0;
+//~ }
