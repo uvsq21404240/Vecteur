@@ -103,7 +103,7 @@ ostream& operator<<(ostream& o, Vecteur& v)
 	int i;
 	for(i = 0; i < v.getTaille(); i++)
 		o << v.getVect()[i] << ' ';
-	return o << '\n';
+	return o;
 }
 
 istream& operator>>(istream& i, Vecteur& v)
