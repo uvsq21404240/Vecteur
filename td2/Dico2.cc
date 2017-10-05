@@ -6,7 +6,7 @@ using namespace std;
 //classe composée
 class Definition
 {
-	private:
+	priv5ate:
 		CString clef;
 		CString def;
 		
@@ -141,13 +141,13 @@ Dictionnaire::Dictionnaire(const Dictionnaire& dico)
 {
 	if(dico.getTete() != NULL)
 	{
-		Noeud *tete_tmp = dico.getTete();
+		Noeud *tete_tmp = dico.getTete();//
 		taille = dico.getTaille();
 
 		Noeud *ptr = new Noeud(tete_tmp->getMot());
 		tete_tmp = tete_tmp->getNext();
-		tete = ptr;
-		while(tete_tmp != NULL)
+		tete = ptr; // mettre le dico a suivant  
+		while(tete_tmp != NULL)// si la liste est nul 
 		{
 			ptr->setNext(new Noeud(tete_tmp->getMot()));
 			tete_tmp = tete_tmp->getNext();
@@ -157,7 +157,7 @@ Dictionnaire::Dictionnaire(const Dictionnaire& dico)
 	else
 	{
 		taille = 0;
-		tete = NULL;
+		tete = NULL; 
 	}
 }
 
